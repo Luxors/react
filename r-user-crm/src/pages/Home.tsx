@@ -1,10 +1,14 @@
 import { useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
+
 import axios from 'axios';
 
 import styles from '../assets/styles/Home.module.css';
 
+import type { User } from './User';
+
 export function Home() {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState<User[]>([]);
   const [currentSort, setCurrentSort] = useState<string>('firstName');
   const [currentSortDir, setCurrentSortDir] = useState<string>('asc');
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -79,7 +83,7 @@ export function Home() {
               {usersSort.map((user) => (
                 <tr key={user.id}>
                   <td>
-                    <a href="" className={styles.link}>
+                    <Link to={`/user/${user.id}`} className={styles.link}>
                       <img
                         src={user.image}
                         alt={`${user.firstName} ${user.lastName}`}
@@ -87,7 +91,7 @@ export function Home() {
                         height="60"
                       />
                       <span>{user.firstName}</span>
-                    </a>
+                    </Link>
                   </td>
                   <td>{user.lastName}</td>
                   <td>{user.age}</td>

@@ -1,24 +1,66 @@
-.app-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 99;
-  padding: 20px 0;
-  background-color: #fff;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
 }
 
-.app-title {
-  margin: 0;
-  font-size: 24px;
+.app-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.app-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 10px 0;
+  flex-shrink: 0;
+  background-color: white;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+.app-header__content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-header__link {
+  position: absolute;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  line-height: 1;
+  text-decoration: none;
 }
 
 .app-main {
+  flex: 1;
   padding-top: 70px;
+}
+
+.app-layout--home .app-main {
+  height: 100%;
+  overflow: hidden;
+}
+
+.app-layout--home .app-main > .app-container {
+  height: 100%;
 }
 
 .app-section-title {
   margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.app-logo {
+  font-size: 40px;
+  line-height: 1;
 }

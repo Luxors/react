@@ -1,0 +1,18 @@
+.user {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.info {
+  text-align: left;
+}
+
+.title {
+  font-weight: 600;
+  color: #494ce8;
+}
+
+dd {
+  margin-left: 0;
+}
