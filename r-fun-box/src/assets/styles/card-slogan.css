@@ -1,0 +1,22 @@
+.card-slogan {
+  font-size: 12px;
+  line-height: 1.231;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.card-slogan--disabled {
+  color: #ff6;
+}
+
+.card-slogan__btn {
+  color: #1699da;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.card-slogan__btn:hover {
+  text-decoration: underline;
+  text-decoration-style: dashed;
+}

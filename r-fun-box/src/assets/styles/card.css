@@ -1,0 +1,158 @@
+@import 'variables';
+
+.card {
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 320px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  color: #666;
+}
+
+.card--selected {
+  --color-accent: #da1667;
+}
+
+.card--disabled {
+  --color-accent: #b3b3b3;
+}
+
+.card-wrapper {
+  position: relative;
+  height: 480px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card-wrapper:before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  padding: 0.25rem;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 29px,
+    var(--color-accent) 0,
+    var(--color-accent) 100%
+  );
+}
+
+.card--disabled .card-wrapper {
+  user-select: none;
+  cursor: default;
+}
+
+.card-background {
+  position: absolute;
+  inset: 0;
+  border-radius: 0 8px 8px 8px;
+  background-image: linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 29px,
+    #f2f2f2 0,
+    #f2f2f2 100%
+  );
+}
+
+.card--disabled .card-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.6;
+  border-radius: 0 8px 8px 8px;
+  background-image: linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 30px,
+    #f2f2f2 30px,
+    #f2f2f2 40%
+  );
+}
+
+.card-product {
+  position: relative;
+  padding-top: 21px;
+  padding-left: 41px;
+}
+
+.card-promo {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.2;
+  color: rgb(102, 102, 102);
+}
+
+.card-title {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+  text-transform: capitalize;
+  color: rgb(0, 0, 0);
+}
+
+.card-consist {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: lowercase;
+  color: rgb(0, 0, 0);
+}
+
+.card-includ__item {
+  font-size: 14px;
+}
+
+.card-includ__item {
+  font-size: 14px;
+  color: rgb(102, 102, 102);
+  line-height: 1.143;
+}
+
+.card-includ__item--bold {
+  font-family: TrebuchetMS-Bold, sans-serif;
+}
+
+.card-image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.card-weight {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  border-radius: 100%;
+  background-color: var(--color-accent);
+}
+
+.card-weight__num {
+  font-size: 2.625rem;
+}
+
+.card-weight__label {
+  font-size: 1.3125rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 30px;
+}

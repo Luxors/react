@@ -1,0 +1,43 @@
+.app-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-image: url('../images/pattern.jpg');
+  background-repeat: repeat;
+  box-shadow:
+    inset 0 100px 60px -35px rgba(0, 0, 0, 0.5),
+    inset 0 -100px 60px -35px rgba(0, 0, 0, 0.5);
+}
+
+.color-yellow {
+  color: #ff6;
+}
+
+.app-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.app-title {
+  margin-bottom: 24px;
+  font-size: 36px;
+  line-height: 1.2;
+  font-family: 'exo2.0-thin', sans-serif;
+  font-weight: 100;
+  color: #fff;
+}
+
+.app-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+  width: 100%;
+}

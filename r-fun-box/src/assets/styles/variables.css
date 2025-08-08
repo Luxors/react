@@ -1,0 +1,11 @@
+:root {
+  --color-accent: #1699da;
+}
+
+.card--selected {
+  --color-accent: #da1667;
+}
+
+.card--disabled {
+  --color-accent: #b3b3b3;
+}
